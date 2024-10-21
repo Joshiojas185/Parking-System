@@ -19,6 +19,10 @@ abstract class Pass {
         this.duration = duration;
     }
 
+    Pass() {
+        this.duration = null;
+    }
+
     /**
      * Abstract method to be implemented by subclasses to get the expiry date of the pass.
      *
@@ -85,15 +89,15 @@ abstract class Pass {
                 switch (durationOption) {
                     case "1" -> {
                         pass = new Daily();
-                        durationType = Constant.DAILY;
+                        durationType = "Daily";
                     }
                     case "2" -> {
                         pass = new Monthly();
-                        durationType = Constant.MONTHLY;
+                        durationType = "Monthly";
                     }
                     case "3" -> {
                         pass = new Annually();
-                        durationType = Constant.MONTHLY;
+                        durationType = "Annually";
                     }
                     default -> {
                         System.out.println(Constant.INVALID_INPUT);
@@ -142,15 +146,15 @@ abstract class Pass {
                 switch (durationOption) {
                     case "1" -> {
                         pass = new Daily();
-                        durationType = Constant.DAILY;
+                        durationType = "Daily";
                     }
                     case "2" -> {
                         pass = new Monthly();
-                        durationType = Constant.MONTHLY;
+                        durationType = "Monthly";
                     }
                     case "3" -> {
                         pass = new Annually();
-                        durationType = Constant.ANNUALLY;
+                        durationType = "Annually";
                     }
                     default -> {
                         System.out.println(Constant.INVALID_INPUT);
@@ -174,14 +178,6 @@ abstract class Pass {
             System.out.print(Constant.THANK_YOU);
         }
     }
-
-    /**
-     * Calculates and returns the price for the specified vehicle type and duration.
-     *
-     * @param vehicleType the type of vehicle as a String
-     * @param duration the duration type as a String
-     * @return an int representing the price for the pass
-     */
     public static int price(String vehicleType, String duration) {
         switch (vehicleType) {
             case "1" -> {
@@ -224,7 +220,7 @@ abstract class Pass {
                 }
             }
         }
-        return 0;
-    }
-}
+        return 0;
+    }
 
+}
