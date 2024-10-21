@@ -10,7 +10,7 @@ class Annually extends Pass{
     /**
      * Calculates and returns the expiry date of the Annually pass, which is set to one year from the current date.
      *
-     * @return a String representing the expiry date of the Annually pass in ISO-8601 format (YYYY-MM-DD)
+     * @return a String representing the expiry date of the Annually pass
      */
     public String getExpiryDate(){
         LocalDate currentDateTime = LocalDate.now();

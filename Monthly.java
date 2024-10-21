@@ -1,7 +1,7 @@
 /*
 This Class is an extended class of abstract Pass Class which is used to
 calculate expiry date of subscription and type of pass.
-Contributors -> Rudra Pratap Singh, Jayant Singh
+Contributors -> Rudra Pratap Singh
  */
 import java.time.LocalDate;
 class Monthly extends Pass {
